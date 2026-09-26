@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#241207">
+<link rel="manifest" href="manifest.json">
+<title>Cantinho do Café</title>
+<style>
+:root{--bg:#140903;--panel:#241106;--panel2:#32180a;--line:#6f3e1d;--cream:#fff3df;--muted:#cbb8a2;--gold:#e6a158;--gold2:#ffc67d;--danger:#b94b43}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#4a260f 0,#1b0d06 38%,#100603 100%);color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}.app{max-width:980px;margin:auto;padding-bottom:105px}.top{padding:18px 16px 10px;display:flex;align-items:center;gap:14px}.brand-logo{width:82px;height:82px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 0 24px #0008}.brand{flex:1}.brand h1{margin:0;font-size:27px;line-height:1.05;font-weight:800}.brand p{margin:8px 0 0;color:var(--muted);font-size:13px}.cart-btn{border:1px solid var(--line);background:#32190bd9;color:var(--cream);width:52px;height:52px;border-radius:16px;font-size:0;position:relative}.cart-btn:after{content:'Carrinho';font-size:12px;font-weight:700}.badge{position:absolute;right:-5px;top:-6px;background:var(--danger);font-size:12px;min-width:22px;height:22px;border-radius:12px;display:grid;place-items:center;font-weight:800}.hero{margin:10px 16px 20px;border:1px solid var(--line);border-radius:24px;min-height:190px;padding:26px;display:flex;align-items:center;background:linear-gradient(90deg,#2a1207ef,#2a12079b),url('logo.png') center/cover;overflow:hidden;box-shadow:0 18px 40px #0007}.hero-content{max-width:560px}.hero h2{font-size:31px;margin:0 0 8px}.hero p{color:#ead8c4;margin:0 0 18px}.pill{display:inline-flex;padding:10px 14px;border-radius:999px;background:var(--gold);color:#2b1508;font-weight:800;text-decoration:none}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:0 16px 20px}.cat{background:#271308;border:1px solid var(--line);border-radius:18px;padding:15px 8px;text-align:center;color:var(--cream);cursor:pointer;font-weight:750}.cat.active{background:#3a1e0e;border-color:var(--gold);color:var(--gold2)}.section-head{display:flex;justify-content:space-between;align-items:end;padding:0 16px 10px}.section-head h2{margin:0;font-size:23px}.section-head button{background:none;border:0;color:var(--gold2);font-weight:700}.products{padding:0 16px;display:grid;gap:11px}.product{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:linear-gradient(145deg,#2a1408,#1d0e06);border:1px solid var(--line);border-radius:18px;padding:15px}.product h3{margin:0 0 5px;font-size:17px}.product p{margin:0;color:var(--muted);font-size:13px;line-height:1.4}.price{font-size:18px;font-weight:850;margin-top:9px;color:var(--gold2)}.add{border:0;background:var(--gold);color:#2b1508;min-width:82px;height:44px;border-radius:13px;font-size:14px;font-weight:900}.cart-panel{position:fixed;z-index:20;right:14px;bottom:92px;width:min(440px,calc(100vw - 28px));max-height:min(76vh,640px);background:#170b05fa;backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:24px;box-shadow:0 25px 70px #000c;display:none;overflow:hidden}.cart-panel.open{display:flex;flex-direction:column}.cart-head{padding:18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #4b2916}.cart-head h2{margin:0;font-size:21px}.icon-btn{background:none;border:0;color:var(--cream);font-size:30px;line-height:1}.cart-list{overflow:auto;padding:10px 14px;min-height:100px}.cart-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid #3f2414}.cart-row h4{margin:0 0 4px}.cart-row small{color:var(--muted)}.qty{display:flex;align-items:center;gap:7px;margin-top:8px}.qty button{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:#2d1609;color:var(--cream)}.trash{border:1px solid var(--line);background:#2b1408;color:#e7c9aa;font-size:12px;border-radius:9px;padding:8px}.cart-bottom{padding:14px 16px;border-top:1px solid #4b2916;background:#1b0d06}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:850;margin-bottom:12px}.checkout{width:100%;border:0;border-radius:15px;padding:15px;background:var(--gold2);color:#241106;font-size:17px;font-weight:900}.empty{text-align:center;color:var(--muted);padding:28px 8px}.bottom{position:fixed;z-index:15;bottom:12px;left:50%;transform:translateX(-50%);width:min(720px,calc(100vw - 24px));display:grid;grid-template-columns:repeat(3,1fr);background:#1d0d06ee;border:1px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 12px 40px #000b;backdrop-filter:blur(10px)}.bottom button{border:0;background:none;color:#cdbba7;padding:10px 4px;border-radius:16px;font-weight:700}.bottom button.active{background:#38200f;color:var(--gold2)}.overlay{position:fixed;inset:0;background:#000b;z-index:40;display:none;align-items:center;justify-content:center;padding:18px}.overlay.open{display:flex}.modal{width:min(500px,100%);max-height:92vh;overflow:auto;background:#1b0d06;border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 30px 90px #000}.modal h2{margin-top:0}.field{margin:10px 0}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:#2b1408;color:var(--cream);outline:none}.actions{display:flex;gap:10px;margin-top:15px}.actions button{flex:1;padding:13px;border-radius:13px;border:1px solid var(--line);font-weight:800}.primary{background:var(--gold2);color:#241106;border:0!important}.success{text-align:center;padding:15px}.success .check{font-size:44px;color:var(--gold2);font-weight:900}.status{background:#2c190d;border:1px solid var(--line);padding:14px;border-radius:14px;margin:14px 0}.status b{color:var(--gold2)}.order-summary{background:#261308;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:left;margin:12px 0;color:var(--muted);font-size:13px}.order-summary strong{color:var(--cream)}
+@media(max-width:600px){.brand h1{font-size:22px}.brand-logo{width:70px;height:70px}.hero{min-height:170px;padding:20px}.hero h2{font-size:25px}.categories{gap:7px}.cat{padding:11px 5px;font-size:13px}.product{grid-template-columns:1fr auto}.add{min-width:74px}.cart-panel{bottom:86px;max-height:78vh}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+<img class="brand-logo" src="logo.png" alt="Logo Cantinho do Café">
+<div class="brand"><h1>Cantinho do Café</h1><p>Mais que café, um momento especial.</p></div>
+<button class="cart-btn" onclick="toggleCart()" aria-label="Abrir carrinho"><span class="badge" id="badge" style="display:none">0</span></button>
+</header>
+<section class="hero"><div class="hero-content"><h2>Café quentinho, sabor em cada detalhe.</h2><p>Escolha seus produtos, monte seu pedido e selecione o horário para retirada.</p><a class="pill" href="#menu">Ver cardápio</a></div></section>
+<section class="categories">
+<button class="cat active" data-cat="Todos" onclick="filter('Todos')">Todos</button>
+<button class="cat" data-cat="Cafés" onclick="filter('Cafés')">Cafés</button>
+<button class="cat" data-cat="Salgados" onclick="filter('Salgados')">Salgados</button>
+<button class="cat" data-cat="Doces" onclick="filter('Doces')">Doces</button>
+</section>
+<section id="menu"><div class="section-head"><h2>Cardápio</h2><button onclick="filter('Todos')">Ver todos</button></div><div id="products" class="products"></div></section>
+</div>
+
+<div id="cartPanel" class="cart-panel">
+<div class="cart-head"><h2>Meu Carrinho</h2><button class="icon-btn" onclick="toggleCart()" aria-label="Fechar carrinho">×</button></div>
+<div id="cartList" class="cart-list"></div>
+<div class="cart-bottom"><div class="total"><span>Subtotal</span><span id="total">R$ 0,00</span></div><button class="checkout" onclick="openCheckout()">Finalizar pedido</button></div>
+</div>
+
+<nav class="bottom"><button class="active" onclick="window.scrollTo({top:0,behavior:'smooth'})">Início</button><button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Cardápio</button><button onclick="toggleCart()">Pedido</button></nav>
+
+<div id="checkout" class="overlay"><div class="modal">
+<div id="checkoutForm">
+<h2>Finalizar pedido</h2><p style="color:var(--muted)">Retirada no Cantinho do Café.</p>
+<div class="field"><label>Seu nome</label><input id="name" placeholder="Digite seu nome"></div>
+<div class="field"><label>WhatsApp</label><input id="phone" placeholder="(21) 99999-9999" inputmode="tel"></div>
+<div class="field"><label>Data da retirada</label><input id="date" type="date"></div>
+<div class="field"><label>Horário</label><input id="time" type="time"></div>
+<div class="field"><label>Observação</label><textarea id="notes" rows="3" placeholder="Alguma observação? (opcional)"></textarea></div>
+<div class="actions"><button onclick="closeCheckout()">Voltar</button><button class="primary" onclick="confirmOrder()">Confirmar pedido</button></div>
+</div>
+<div id="success" class="success" style="display:none"><div class="check">Pedido confirmado</div><h2>Seu pedido foi recebido.</h2><div class="status">Status: <b>Esperando retirada</b></div><div id="summary" class="order-summary"></div><button class="checkout" onclick="sendWhatsApp()">Enviar pedido no WhatsApp</button><div class="actions"><button onclick="closeCheckout()">Fechar</button><button class="primary" onclick="location.reload()">Novo pedido</button></div></div>
+</div></div>
+
+<script>
+const products=[
+{id:1,name:'Café Expresso',cat:'Cafés',price:6,desc:'Café encorpado, intenso e servido bem quente.'},
+{id:2,name:'Café com Leite',cat:'Cafés',price:7,desc:'Café passado com leite cremoso e equilibrado.'},
+{id:3,name:'Cappuccino',cat:'Cafés',price:8,desc:'Café, leite cremoso e uma camada suave de espuma.'},
+{id:4,name:'Café Mocha',cat:'Cafés',price:9,desc:'Café com leite e chocolate, cremoso e marcante.'},
+{id:5,name:'Chocolate Quente',cat:'Cafés',price:8,desc:'Chocolate cremoso e quente, perfeito para acompanhar um doce.'},
+{id:6,name:'Pão de Queijo',cat:'Salgados',price:5,desc:'Assado na hora, dourado por fora e macio por dentro.'},
+{id:7,name:'Croissant',cat:'Salgados',price:8,desc:'Massa folhada dourada, leve e crocante.'},
+{id:8,name:'Misto Quente',cat:'Salgados',price:9,desc:'Pão tostado com presunto e queijo derretido.'},
+{id:9,name:'Brownie Tradicional',cat:'Doces',price:6,desc:'Brownie macio, chocolatudo e com sabor caseiro.'},
+{id:10,name:'Brownie Recheado',cat:'Doces',price:8,desc:'Brownie macio com recheio cremoso no centro.'},
+{id:11,name:'Bolo do Dia',cat:'Doces',price:7,desc:'Fatia fresca, preparada para acompanhar seu café.'},
+{id:12,name:'Torta de Chocolate',cat:'Doces',price:9,desc:'Fatia cremosa de chocolate com massa delicada.'}
+];
+let cart={};let current='Todos';let lastOrder='';
+function money(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function render(){
+const el=document.getElementById('products');
+el.innerHTML='';
+products.filter(p=>current==='Todos'||p.cat===current).forEach(p=>{el.insertAdjacentHTML('beforeend',`<article class="product"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${money(p.price)}</div></div><button class="add" onclick="add(${p.id})">Adicionar</button></article>`)})
+renderCart();document.querySelectorAll('.cat').forEach(b=>b.classList.toggle('active',b.dataset.cat===current));
+}
+function add(id){cart[id]=(cart[id]||0)+1;renderCart();document.getElementById('cartPanel').classList.add('open')}
+function change(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];renderCart()}
+function total(){return Object.entries(cart).reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0)}
+function renderCart(){
+const list=document.getElementById('cartList');const ids=Object.keys(cart);const badge=document.getElementById('badge');badge.style.display=ids.length?'grid':'none';badge.textContent=ids.reduce((s,id)=>s+cart[id],0);document.getElementById('total').textContent=money(total());
+if(!ids.length){list.innerHTML='<div class="empty">Seu carrinho está vazio.<br>Escolha os produtos no cardápio.</div>';return}
+list.innerHTML=ids.map(id=>{const p=products.find(x=>x.id==id),q=cart[id];return `<div class="cart-row"><div><h4>${p.name}</h4><small>${money(p.price)} cada</small><div class="qty"><button onclick="change(${p.id},-1)">−</button><b>${q}</b><button onclick="change(${p.id},1)">+</button></div></div><button class="trash" onclick="change(${p.id},-999)">Excluir</button></div>`}).join('')}
+function toggleCart(){document.getElementById('cartPanel').classList.toggle('open')}
+function filter(cat){current=cat;render();document.getElementById('menu').scrollIntoView({behavior:'smooth'})}
+function openCheckout(){if(!Object.keys(cart).length){alert('Adicione pelo menos um item ao carrinho.');return}document.getElementById('cartPanel').classList.remove('open');document.getElementById('checkout').classList.add('open');document.getElementById('checkoutForm').style.display='block';document.getElementById('success').style.display='none'}
+function closeCheckout(){document.getElementById('checkout').classList.remove('open')}
+function confirmOrder(){
+const name=document.getElementById('name').value.trim();if(!name){alert('Digite seu nome para confirmar.');return}
+const date=document.getElementById('date').value,time=document.getElementById('time').value;if(!date||!time){alert('Escolha a data e o horário da retirada.');return}
+const items=Object.entries(cart).map(([id,q])=>`${q}x ${products.find(p=>p.id==id).name}`).join(', ');
+lastOrder=`Pedido Cantinho do Café\nCliente: ${name}\nItens: ${items}\nTotal: ${money(total())}\nRetirada: ${date} às ${time}\nObservação: ${document.getElementById('notes').value||'Nenhuma'}\nStatus: Esperando retirada`;
+document.getElementById('summary').innerHTML=`<strong>Cliente:</strong> ${name}<br><strong>Itens:</strong> ${items}<br><strong>Total:</strong> ${money(total())}<br><strong>Retirada:</strong> ${date} às ${time}`;
+document.getElementById('checkoutForm').style.display='none';document.getElementById('success').style.display='block';
+}
+function sendWhatsApp(){const phone=document.getElementById('phone').value.replace(/\D/g,'');if(!phone){alert('Digite seu WhatsApp para enviar o pedido.');return}window.open('https://wa.me/55'+phone+'?text='+encodeURIComponent(lastOrder),'_blank')}
+render();
+</script>
+</body></html>
